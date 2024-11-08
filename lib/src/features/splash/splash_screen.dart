@@ -25,7 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(AppImages.splash),
+          Image.asset(
+            AppImages.splash,
+            height: Get.height,
+            width: Get.width,
+            fit: BoxFit.cover,
+          ),
           SafeArea(
             child: Column(
               children: [

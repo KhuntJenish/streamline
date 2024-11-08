@@ -120,7 +120,7 @@ class OverdueCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: Container(
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
@@ -130,28 +130,29 @@ class OverdueCard extends StatelessWidget {
         child: Row(
           children: [
             SvgPicture.asset(AppIcons.invoice),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      no,
-                      style: context.ts18()?.bold,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: SvgPicture.asset(AppIcons.arrowRightUp),
-                    ),
-                  ],
-                ),
-                Text(
-                  label,
-                  style: context.ts14(color: context.colorScheme.secondary)?.regular,
-                ),
-              ],
-            ).paddingSymmetric(vertical: 6, horizontal: 8)
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(no, style: context.ts18()?.bold),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: SvgPicture.asset(AppIcons.arrowRightUp),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    label,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: context.ts14(color: context.colorScheme.secondary)?.regular,
+                  ),
+                ],
+              ).paddingSymmetric(vertical: 6, horizontal: 8),
+            )
           ],
         ),
       ),

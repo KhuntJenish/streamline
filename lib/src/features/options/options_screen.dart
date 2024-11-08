@@ -33,7 +33,7 @@ class OptionsScreen extends GetWidget<OptionsController> {
         bottomNavigationBar: SafeArea(
           minimum: const EdgeInsets.all(Sizes.p16),
           child: Container(
-            constraints: const BoxConstraints(maxHeight: 81),
+            constraints: BoxConstraints(maxHeight: 81, maxWidth: Get.width),
             decoration: BoxDecoration(
               color: context.colorScheme.surface,
               borderRadius: BorderRadius.circular(100),
@@ -41,7 +41,6 @@ class OptionsScreen extends GetWidget<OptionsController> {
             ),
             child: GetBuilder<OptionsController>(
               builder: (controller) => ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: controller.widgetOptions.length,
                 itemBuilder: (context, index) {
@@ -52,7 +51,7 @@ class OptionsScreen extends GetWidget<OptionsController> {
                       controller.selectedIndex == index
                           ? controller.activeWidgetOptions[index]
                           : controller.widgetOptions[index],
-                    ).paddingAll(5),
+                    ).paddingAll(4),
                   );
                 },
               ),

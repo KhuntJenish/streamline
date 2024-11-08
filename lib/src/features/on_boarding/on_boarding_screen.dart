@@ -13,7 +13,12 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(AppImages.onboarding),
+          Image.asset(
+            AppImages.onboarding,
+            height: Get.height,
+            width: Get.width,
+            fit: BoxFit.cover,
+          ),
           SafeArea(
             minimum: const EdgeInsets.all(Sizes.p16),
             child: Column(
@@ -38,7 +43,7 @@ class OnBoardingScreen extends StatelessWidget {
                 gapH40,
                 Row(
                   children: [
-                    SvgPicture.asset(AppIcons.next),
+                    SvgPicture.asset(AppIcons.next).paddingOnly(top: 8),
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () => Get.offAllNamed(Routes.LOGIN),
