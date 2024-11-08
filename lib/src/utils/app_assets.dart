@@ -3,11 +3,10 @@ class AppImages {
 
   static const imagePath = 'assets/images';
 
-  static const blob_1 = '$imagePath/blob-1.png';
-  static const blob_2 = '$imagePath/blob-2.png';
-  static const blob_3 = '$imagePath/blob-3.png';
-  static const blob_4 = '$imagePath/blob-4.png';
-  static const profile = '$imagePath/profile.png';
+  static const splash = '$imagePath/splash.png';
+  static const logo = '$imagePath/logo.png';
+  static const streamlineTxt = '$imagePath/streamline_txt.png';
+  static const onboarding = '$imagePath/onboarding.png';
 }
 
 class AppIcons {
@@ -15,9 +14,7 @@ class AppIcons {
 
   static const iconPath = 'assets/icons';
 
-  static const appIcon = '$iconPath/app-icon.svg';
-  static const rightArrow = '$iconPath/right-arrow.svg';
-  static const uploadPhoto = '$iconPath/upload-photo.svg';
+  static const next = '$iconPath/next.svg';
 }
 
 class AppNavBarIcons {

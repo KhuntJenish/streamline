@@ -9,11 +9,7 @@ abstract class Routes {
 
   static const SPLASH = _Paths.SPLASH;
   static const LOGIN = _Paths.LOGIN;
-  static const CREATE_ACCOUNT = _Paths.CREATE_ACCOUNT;
-  static const PASSWORD = _Paths.PASSWORD;
-  static const PASSWORD_RECOVERY = _Paths.PASSWORD_RECOVERY;
-  static const PASSWORD_RECOVERY_CODE = _Paths.PASSWORD_RECOVERY_CODE;
-  static const NEW_PASSWORD = _Paths.NEW_PASSWORD;
+  static const ON_BOARDING = _Paths.ON_BOARDING;
 }
 
 abstract class _Paths {
@@ -21,9 +17,5 @@ abstract class _Paths {
 
   static const SPLASH = '/splash';
   static const LOGIN = '/login';
-  static const CREATE_ACCOUNT = '/create-account';
-  static const PASSWORD = '/password';
-  static const PASSWORD_RECOVERY = '/password-recovery';
-  static const PASSWORD_RECOVERY_CODE = '/password-recovery-code';
-  static const NEW_PASSWORD = '/new-password';
+  static const ON_BOARDING = '/on-boarding';
 }

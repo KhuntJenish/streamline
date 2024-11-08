@@ -6,15 +6,15 @@ abstract class AppTheme {
   static ThemeData lightThemeData(BuildContext context) {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: "Raleway",
+      fontFamily: "SFProText",
       cardColor: Colors.white,
       hintColor: const Color(0xff8CA9C2),
-      primaryColor: const Color(0xff2490EF),
+      primaryColor: const Color(0xff4E55F5),
       indicatorColor: const Color(0xff2490EF),
       scaffoldBackgroundColor: const Color(0xffF8F8F8),
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xff2490EF),
-        primary: const Color(0xff004BFE),
+        primary: const Color(0xff4E55F5),
         onPrimary: Colors.white,
         surface: Colors.white,
         onSurface: const Color(0xff04002E),
@@ -30,13 +30,13 @@ abstract class AppTheme {
           green: Color(0xff52B85C),
           warning: Color(0xffFFBE1D),
           gradientColor1: Color(0xff00C0FF),
-          gradientColor2: Color(0xff4071FF),
+          gradientColor2: Color(0xff4E55F5),
         ),
       ],
       dividerTheme: const DividerThemeData(thickness: 1, color: Color(0xffF2F0F6)),
       textTheme: Theme.of(context).textTheme.apply(
-            bodyColor: const Color(0xff202020),
-            displayColor: const Color(0xff202020),
+            bodyColor: const Color(0xff222322),
+            displayColor: const Color(0xff222322),
           ),
       bottomSheetTheme: const BottomSheetThemeData(
         showDragHandle: true,
@@ -53,7 +53,7 @@ abstract class AppTheme {
         hintStyle: TextStyle(
           fontSize: 16,
           color: Colors.grey.shade500,
-          fontFamily: 'NunitoSans',
+          fontFamily: 'SFProText',
           fontWeight: FontWeight.w600,
         ).regular,
         labelStyle: const TextStyle(fontSize: 16, color: Color(0xffD2D2D2)).regular,
@@ -78,7 +78,7 @@ abstract class AppTheme {
           borderSide: const BorderSide(color: Color(0x80C32033)),
         ),
       ),
-      textSelectionTheme: const TextSelectionThemeData(cursorColor: Color(0xff000000)),
+      textSelectionTheme: const TextSelectionThemeData(cursorColor: Color(0xff222322)),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.white,
@@ -95,9 +95,9 @@ abstract class AppTheme {
         style: ElevatedButton.styleFrom(
           elevation: 2,
           shadowColor: Colors.white,
-          backgroundColor: const Color(0xff004CFF),
-          minimumSize: const Size(double.infinity, 61),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.p16)),
+          backgroundColor: const Color(0xff4E55F5),
+          minimumSize: const Size(double.infinity, 66),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
@@ -109,7 +109,7 @@ abstract class AppTheme {
       navigationBarTheme: NavigationBarThemeData(
         height: 65,
         indicatorColor: Colors.white24,
-        backgroundColor: const Color(0xff2490EF),
+        backgroundColor: const Color(0xff4E55F5),
         iconTheme: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
             return const IconThemeData(color: Colors.white);
@@ -129,7 +129,7 @@ abstract class AppTheme {
         toolbarHeight: 56,
         scrolledUnderElevation: 0,
         backgroundColor: const Color(0xffffffff),
-        iconTheme: const IconThemeData(color: Color(0xff2490EF)),
+        iconTheme: const IconThemeData(color: Color(0xff4E55F5)),
         actionsIconTheme: const IconThemeData(color: Color(0xff8BA2C5)),
         titleTextStyle: const TextStyle(fontSize: 18, color: Color(0xff04002E)).semiBold,
       ),
