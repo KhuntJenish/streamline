@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:streamline/src/features/login/login_screen.dart';
 import 'package:streamline/src/features/on_boarding/on_boarding_screen.dart';
+import 'package:streamline/src/features/options/options_controller.dart';
+import 'package:streamline/src/features/options/options_screen.dart';
 
 import '../features/splash/splash_screen.dart';
 
@@ -20,10 +22,15 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => const LoginScreen(),
     ),
-    // GetPage(
-    //   name: _Paths.PASSWORD,
-    //   page: () => const PasswordScreen(),
-    // ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => const OptionsScreen(),
+      binding: BindingsBuilder(
+        () => Get.lazyPut<OptionsController>(
+          () => OptionsController(),
+        ),
+      ),
+    ),
     // GetPage(
     //   name: _Paths.PASSWORD_RECOVERY,
     //   page: () => PasswordRecoveryScreen(),

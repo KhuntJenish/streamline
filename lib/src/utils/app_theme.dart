@@ -11,7 +11,7 @@ abstract class AppTheme {
       hintColor: const Color(0xff8CA9C2),
       primaryColor: const Color(0xff4E55F5),
       indicatorColor: const Color(0xff2490EF),
-      scaffoldBackgroundColor: const Color(0xffF8F8F8),
+      scaffoldBackgroundColor: Colors.white,
       colorScheme: ColorScheme.fromSeed(
         seedColor: const Color(0xff2490EF),
         primary: const Color(0xff4E55F5),
@@ -24,6 +24,7 @@ abstract class AppTheme {
         onError: Colors.white,
         outline: const Color(0xff8CA9C2),
         shadow: const Color(0x0f00498a),
+        secondary: const Color(0xff87888E),
       ),
       extensions: const <ThemeExtension<AppColors>>[
         AppColors(
@@ -47,34 +48,35 @@ abstract class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         alignLabelWithHint: true,
-        fillColor: Colors.grey.shade200,
-        prefixIconColor: const Color(0xff8CA9C2),
+        fillColor: Colors.white,
+        prefixIconColor: const Color(0xff1a191e),
+        suffixIconColor: const Color(0xff1A191E),
         contentPadding: const EdgeInsets.all(Sizes.p16),
-        hintStyle: TextStyle(
-          fontSize: 16,
-          color: Colors.grey.shade500,
+        hintStyle: const TextStyle(
+          fontSize: 19,
+          color: Color(0xff87888E),
           fontFamily: 'SFProText',
           fontWeight: FontWeight.w600,
         ).regular,
         labelStyle: const TextStyle(fontSize: 16, color: Color(0xffD2D2D2)).regular,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Sizes.p60),
-          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(Sizes.p32),
+          borderSide: const BorderSide(color: Color(0xffE6E9F4)),
         ),
         disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Sizes.p60),
-          borderSide: const BorderSide(color: Color(0xffE0EAF3)),
+          borderRadius: BorderRadius.circular(Sizes.p32),
+          borderSide: const BorderSide(color: Color(0xffE6E9F4)),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Sizes.p60),
-          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(Sizes.p32),
+          borderSide: const BorderSide(color: Color(0xffE6E9F4)),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Sizes.p60),
+          borderRadius: BorderRadius.circular(Sizes.p32),
           borderSide: const BorderSide(color: Color(0xffC32033)),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(Sizes.p60),
+          borderRadius: BorderRadius.circular(Sizes.p32),
           borderSide: const BorderSide(color: Color(0x80C32033)),
         ),
       ),
@@ -140,13 +142,12 @@ abstract class AppTheme {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.p16)),
         ),
       ),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: Colors.white),
-      listTileTheme: ListTileThemeData(
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Color(0xff4E55F5),
+        shape: CircleBorder(side: BorderSide()),
+      ),
+      listTileTheme: const ListTileThemeData(
         dense: true,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Sizes.p16),
-          side: const BorderSide(color: Color(0xffF2F0F6)),
-        ),
       ),
       popupMenuTheme: PopupMenuThemeData(
         elevation: 5,

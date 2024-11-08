@@ -39,6 +39,7 @@ const SizedBox gapW40 = SizedBox(width: Sizes.p40);
 /// Constant gap heights
 const SizedBox gapH2 = SizedBox(height: Sizes.p2);
 const SizedBox gapH4 = SizedBox(height: Sizes.p4);
+const SizedBox gapH6 = SizedBox(height: Sizes.p6);
 const SizedBox gapH8 = SizedBox(height: Sizes.p8);
 const SizedBox gapH12 = SizedBox(height: Sizes.p12);
 const SizedBox gapH16 = SizedBox(height: Sizes.p16);

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:streamline/src/routes/app_pages.dart';
 import 'package:streamline/src/utils/utils.dart';
 
 import '../../constants/app_sizes.dart';
@@ -38,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                   gapH32,
                   gapH12,
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.offAllNamed(Routes.HOME),
                     child: Text(
                       'Sign In',
                       style: context.ts20(color: context.colorScheme.surface)?.bold,
@@ -46,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   gapH8,
                   OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.offAllNamed(Routes.HOME),
                     child: Text(
                       'Create Account',
                       style: context.ts20()?.bold,
