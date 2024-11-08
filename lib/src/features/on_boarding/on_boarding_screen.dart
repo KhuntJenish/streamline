@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:streamline/src/constants/app_sizes.dart';
+import 'package:streamline/src/routes/app_pages.dart';
 import 'package:streamline/src/utils/utils.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -24,7 +26,7 @@ class OnBoardingScreen extends StatelessWidget {
                       .ts24(
                         color: context.colorScheme.primary,
                       )
-                      ?.copyWith(fontSize: 32)
+                      ?.copyWith(fontSize: 32, fontFamily: 'Poppins')
                       .bold,
                 ),
                 gapH16,
@@ -39,7 +41,7 @@ class OnBoardingScreen extends StatelessWidget {
                     SvgPicture.asset(AppIcons.next),
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => Get.offAllNamed(Routes.LOGIN),
                         child: Text(
                           'Next',
                           style: context.ts20(color: context.colorScheme.surface)?.bold,

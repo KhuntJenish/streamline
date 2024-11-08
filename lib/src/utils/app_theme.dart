@@ -33,7 +33,7 @@ abstract class AppTheme {
           gradientColor2: Color(0xff4E55F5),
         ),
       ],
-      dividerTheme: const DividerThemeData(thickness: 1, color: Color(0xffF2F0F6)),
+      dividerTheme: const DividerThemeData(thickness: 1, color: Color(0xffE6E9F4)),
       textTheme: Theme.of(context).textTheme.apply(
             bodyColor: const Color(0xff222322),
             displayColor: const Color(0xff222322),
@@ -82,12 +82,12 @@ abstract class AppTheme {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.white,
-          minimumSize: const Size(double.infinity, 56),
-          side: const BorderSide(color: Color(0xff8CA9C2)),
+          minimumSize: const Size(double.infinity, 66),
+          side: const BorderSide(color: Color(0xff222322)),
           padding: const EdgeInsets.symmetric(horizontal: Sizes.p16),
-          textStyle: const TextStyle(fontSize: 16, color: Color(0xff8CA9C2)),
+          textStyle: const TextStyle(fontSize: 16, color: Color(0xff222322)),
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(Sizes.p16)),
+            borderRadius: BorderRadius.all(Radius.circular(100)),
           ),
         ),
       ),

@@ -7,6 +7,8 @@ class AppImages {
   static const logo = '$imagePath/logo.png';
   static const streamlineTxt = '$imagePath/streamline_txt.png';
   static const onboarding = '$imagePath/onboarding.png';
+  static const blueLogo = '$imagePath/blue-logo.png';
+  static const bottomWave = '$imagePath/bottom-wave.png';
 }
 
 class AppIcons {
@@ -15,6 +17,9 @@ class AppIcons {
   static const iconPath = 'assets/icons';
 
   static const next = '$iconPath/next.svg';
+  static const google = '$iconPath/google.svg';
+  static const facebook = '$iconPath/facebook.svg';
+  static const apple = '$iconPath/apple.svg';
 }
 
 class AppNavBarIcons {
