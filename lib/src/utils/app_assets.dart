@@ -16,6 +16,7 @@ class AppImages {
   static const currentBalanceCard = '$imagePath/current-balance.png';
   static const totalPayableCard = '$imagePath/total-payable.png';
   static const bag = '$imagePath/bag.png';
+  static const camera = '$imagePath/camera.png';
 }
 
 class AppIcons {
