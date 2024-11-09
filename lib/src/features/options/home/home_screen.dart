@@ -41,16 +41,77 @@ class HomeScreen extends StatelessWidget {
               ),
               gapH12,
               SizedBox(
-                height: 176,
-                child: Image.asset(
-                  AppImages.currentBalanceCard,
+                // height: 176,
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      AppImages.currentBalanceCard,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Current Balance',
+                          style: context.ts16(color: context.colorScheme.surface)?.regular,
+                        ),
+                        gapH16,
+                        Row(
+                          children: [
+                            SvgPicture.asset(AppIcons.wallet),
+                            gapW16,
+                            gapW4,
+                            Column(
+                              children: [
+                                Text(
+                                  '₹89,099',
+                                  style: context
+                                      .ts32(color: context.colorScheme.surface)
+                                      ?.copyWith(fontFamily: 'SFProDisplay'),
+                                ),
+                                Text(
+                                  'Total Receivables',
+                                  style: context.ts14(color: context.colorScheme.surface)?.medium,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        gapH16,
+                        Row(
+                          children: [
+                            SvgPicture.asset(AppIcons.billCheck),
+                            Text(
+                              'Last Payment on October 26, 2004',
+                              style: context.ts12(color: context.colorScheme.surface)?.regular,
+                            ),
+                          ],
+                        )
+                      ],
+                    ).paddingSymmetric(horizontal: 26, vertical: 10),
+                  ],
                 ),
               ),
               gapH6,
               SizedBox(
-                height: 90,
-                child: Image.asset(
-                  AppImages.totalPayableCard,
+                child: Stack(
+                  children: [
+                    Image.asset(AppImages.totalPayableCard),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '₹23,12,099',
+                          style: context
+                              .ts32(color: context.colorScheme.onSecondary)
+                              ?.copyWith(fontFamily: 'SFProDisplay'),
+                        ),
+                        Text(
+                          'Total Payables',
+                          style: context.ts16(color: context.colorScheme.onSecondary)?.medium,
+                        ),
+                      ],
+                    ).paddingSymmetric(horizontal: 25, vertical: 13)
+                  ],
                 ),
               ),
               gapH6,

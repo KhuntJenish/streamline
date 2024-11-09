@@ -43,6 +43,8 @@ class AppIcons {
   static const bell = '$iconPath/bell.svg';
   static const calendar = '$iconPath/calendar.svg';
   static const setting = '$iconPath/setting.svg';
+  static const wallet = '$iconPath/wallet.svg';
+  static const billCheck = '$iconPath/bill-check.svg';
 }
 
 class AppNavBarIcons {

@@ -34,6 +34,7 @@ dependencies:
   flutter_animate: ^4.5.0
   flutter_svg: ^2.0.11
   get: ^4.6.6
+  google_fonts: ^6.2.1
   responsive_framework: ^1.5.1
 
 dev_dependencies:
@@ -98,6 +99,9 @@ flutter:
           weight: 600
         - asset: assets/fonts/SFProText-Bold.ttf
           weight: 700
-  #
+    - family: SFProDisplay
+      fonts:
+        - asset: assets/fonts/SFProDisplay-Black-Italic.ttf
+         
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

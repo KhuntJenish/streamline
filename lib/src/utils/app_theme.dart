@@ -10,10 +10,10 @@ abstract class AppTheme {
       cardColor: Colors.white,
       hintColor: const Color(0xff8CA9C2),
       primaryColor: const Color(0xff4E55F5),
-      indicatorColor: const Color(0xff2490EF),
+      indicatorColor: const Color(0xff4D54F3),
       scaffoldBackgroundColor: Colors.white,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color(0xff2490EF),
+        seedColor: const Color(0xff4D54F3),
         primary: const Color(0xff4E55F5),
         onPrimary: Colors.white,
         surface: Colors.white,
@@ -25,6 +25,7 @@ abstract class AppTheme {
         outline: const Color(0xff8CA9C2),
         shadow: const Color(0x0f00498a),
         secondary: const Color(0xff87888E),
+        onSecondary: const Color(0xff4D54F3),
       ),
       extensions: const <ThemeExtension<AppColors>>[
         AppColors(
@@ -38,6 +39,7 @@ abstract class AppTheme {
       textTheme: Theme.of(context).textTheme.apply(
             bodyColor: const Color(0xff222322),
             displayColor: const Color(0xff222322),
+            fontFamily: 'SFProText',
           ),
       bottomSheetTheme: const BottomSheetThemeData(
         showDragHandle: true,
@@ -229,6 +231,8 @@ extension BuildContextX on BuildContext {
       .copyWith(fontSize: 20, color: color, letterSpacing: -0.24);
   TextStyle? ts24({Color? color}) =>
       theme.textTheme.titleLarge?.medium.copyWith(fontSize: 24, color: color);
+  TextStyle? ts32({Color? color}) =>
+      theme.textTheme.titleLarge?.medium.copyWith(fontSize: 32, color: color);
 
   Color? get green => theme.extension<AppColors>()?.green;
   Color? get warning => theme.extension<AppColors>()?.warning;
