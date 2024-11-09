@@ -30,42 +30,52 @@ class OptionsScreen extends GetWidget<OptionsController> {
     // }
 
     return Scaffold(
-        bottomNavigationBar: SafeArea(
-          minimum: const EdgeInsets.all(Sizes.p16),
-          child: Container(
-            constraints: BoxConstraints(maxHeight: 81, maxWidth: Get.width),
-            decoration: BoxDecoration(
-              color: context.colorScheme.surface,
-              borderRadius: BorderRadius.circular(100),
-              border: Border.all(color: const Color(0xffECECEC)),
-            ),
-            child: GetBuilder<OptionsController>(
-              builder: (controller) => ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: controller.widgetOptions.length,
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    borderRadius: BorderRadius.circular(100),
-                    onTap: () => controller.onItemTapped(index),
-                    child: SvgPicture.asset(
-                      controller.selectedIndex == index
-                          ? controller.activeWidgetOptions[index]
-                          : controller.widgetOptions[index],
-                    ).paddingAll(4),
-                  );
-                },
-              ),
+      bottomNavigationBar: SafeArea(
+        minimum: const EdgeInsets.all(Sizes.p16),
+        child: Container(
+          constraints: BoxConstraints(maxHeight: 81, maxWidth: Get.width),
+          decoration: BoxDecoration(
+            color: context.colorScheme.surface,
+            borderRadius: BorderRadius.circular(100),
+            border: Border.all(color: const Color(0xffECECEC)),
+          ),
+          child: GetBuilder<OptionsController>(
+            builder: (controller) => Row(
+              children: [
+                for (int i = 0; i < controller.widgetOptions.length; i++)
+                  Expanded(
+                    child: SizedBox(
+                      height: 81,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(100),
+                        onTap: () => controller.onItemTapped(i),
+                        child: SvgPicture.asset(
+                          controller.selectedIndex == i
+                              ? controller.activeWidgetOptions[i]
+                              : controller.widgetOptions[i],
+                        ).paddingAll(4),
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
         ),
-        body: GetBuilder<OptionsController>(
-          builder: (controller) => switch (controller.selectedIndex) {
-            1 => const CrmScreen(),
-            2 => const ProjectsScreen(),
-            3 => const ShootsScreen(),
-            4 => Container(),
-            0 || _ => const HomeScreen(),
-          },
-        ));
+      ),
+      body: GetBuilder<OptionsController>(
+        builder: (controller) => switch (controller.selectedIndex) {
+          1 => const CrmScreen(),
+          2 => const ProjectsScreen(),
+          3 => const ShootsScreen(),
+          4 => Center(
+              child: Text(
+                'Last Menu selected, But Ui Not Found!',
+                style: context.ts14(color: context.colorScheme.primary)?.semiBold,
+              ),
+            ),
+          0 || _ => const HomeScreen(),
+        },
+      ),
+    );
   }
 }
